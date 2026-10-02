@@ -16,6 +16,9 @@ export const hours = {
   dinner: ["Monday to Sunday", "05.00 pm - 10.00pm"],
 };
 
+/** Opening day shown on the /coming-soon countdown. */
+export const launchDate = "2026-12-01T19:00:00";
+
 export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Menus", href: "#menu" },
