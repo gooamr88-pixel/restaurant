@@ -2273,3 +2273,142 @@ body:has(.coming-soon) {
   }
 
 }
+
+/* We're hiring */
+
+.hiring-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold-crayola);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-1);
+  padding: 8px 18px;
+  border: 1px solid var(--gold-crayola);
+  border-radius: 50px;
+  background-color: hsla(38, 61%, 73%, 0.08);
+  margin-block-end: 30px;
+  transition: var(--transition-1);
+}
+
+.hiring-badge:is(:hover, :focus-visible) {
+  background-color: var(--gold-crayola);
+  color: var(--smoky-black-1);
+}
+
+.hiring-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-circle);
+  background-color: currentColor;
+}
+
+.hiring-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: currentColor;
+  animation: hiring-pulse 1.8s ease-out infinite;
+}
+
+@keyframes hiring-pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+.hiring {
+  position: relative;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-block-end: 50px;
+  padding: 45px 20px;
+  border: 1px solid var(--gold-crayola);
+  background-color: hsla(210, 4%, 9%, 0.85);
+  scroll-margin-block-start: 30px;
+}
+
+/* gold corner frame, echoing the template's ornamental style */
+.hiring::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--white-alpha-10);
+  pointer-events: none;
+}
+
+.hiring .section-subtitle::after { margin-block: 14px 20px; }
+
+.hiring-title { margin-block-end: 16px; }
+
+.hiring-text {
+  color: var(--quick-silver);
+  max-width: 480px;
+  margin-inline: auto;
+  margin-block-end: 26px;
+}
+
+.hiring-roles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-block-end: 32px;
+}
+
+.hiring-role {
+  color: var(--white);
+  padding: 6px 14px;
+  border: 1px solid var(--white-alpha-20);
+  background-color: var(--white-alpha-10);
+}
+
+.hiring-btn { margin-inline: auto; }
+
+.hiring-contact {
+  color: var(--quick-silver);
+  margin-block-start: 24px;
+  line-height: var(--lineHeight-3);
+}
+
+.hiring-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-block-start: 6px;
+}
+
+.hiring-email-link {
+  color: var(--gold-crayola);
+  font-weight: var(--weight-bold);
+  word-break: break-all;
+}
+
+.hiring-email-link:is(:hover, :focus-visible) { text-decoration: underline; }
+
+.hiring-copy {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--gold-crayola);
+  border: 1px solid var(--white-alpha-20);
+  background: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.hiring-copy:is(:hover, :focus-visible) { border-color: var(--gold-crayola); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hiring-dot::after { animation: none; }
+}
+
+@media (min-width: 575px) {
+  .hiring { padding: 55px 50px; }
+}

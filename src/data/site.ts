@@ -19,6 +19,14 @@ export const hours = {
 /** Opening day shown on the /coming-soon countdown. */
 export const launchDate = "2026-12-01T19:00:00";
 
+/** "We're hiring" block on the /coming-soon page. */
+export const careers = {
+  email: "fadi.auchi@gmail.com",
+  roles: ["Chefs & Cooks", "Kitchen Assistants", "Waiters & Servers", "Hosts & Cashiers"],
+  mailSubject: "Job Application",
+  mailBody: "Name:\nPosition:\nPhone:\nYears of experience:\n\n(Please attach your CV)",
+};
+
 export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Menus", href: "#menu" },

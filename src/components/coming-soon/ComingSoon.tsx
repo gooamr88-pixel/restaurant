@@ -4,6 +4,7 @@ import { useState, useSyncExternalStore, type FormEvent } from "react";
 import Image from "next/image";
 import { IoMailOutline } from "react-icons/io5";
 import Button from "@/components/ui/Button";
+import Hiring, { HiringBadge } from "@/components/coming-soon/Hiring";
 import { contact, launchDate, socialLinks } from "@/data/site";
 
 const LAUNCH_TIME = new Date(launchDate).getTime();
@@ -48,6 +49,8 @@ export default function ComingSoon() {
         <div className="logo">
           <Image src="/images/logo.svg" width={160} height={50} alt="grilli home" preload />
         </div>
+
+        <HiringBadge />
 
         <p className="label-2 section-subtitle">Coming Soon</p>
 
@@ -94,6 +97,8 @@ export default function ComingSoon() {
             <Button type="submit">Notify Me</Button>
           </form>
         )}
+
+        <Hiring />
 
         <ul className="coming-soon-social">
           {socialLinks.map((link) => (
